@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: client
+  jpa:
+    open-in-view: false
+    hibernate.ddl-auto: validate
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mosb
+    username: mosb
+    password: Passw0rd
+    driverClassName: org.postgresql.Driver
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 15

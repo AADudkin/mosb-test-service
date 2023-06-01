@@ -1,0 +1,5 @@
+databaseChangeLog:
+
+  - include:
+      file: 2023/05/31/create-clients-table.xml
+      relativeToChangelogFile: true

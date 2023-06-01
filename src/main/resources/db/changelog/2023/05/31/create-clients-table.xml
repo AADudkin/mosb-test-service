@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.22.xsd">
+
+    <changeSet id="1" author="adudkin">
+        <createTable tableName="clients">
+            <column name="id" type="bigserial" remarks="Id записи">
+                <constraints nullable="false" primaryKey="true" unique="true"/>
+            </column>
+            <column name="bank_id" type="varchar(100)" remarks="идентификатор клиента в банке"/>
+            <column name="first_name" type="varchar(50)" remarks="имя"/>
+            <column name="last_name" type="varchar(50)" remarks="фамилия"/>
+            <column name="patronymic" type="varchar(50)" remarks="отчество"/>
+            <column name="date_of_birth" type="timestamp" remarks="Дата рождения"/>
+            <column name="place_of_birth" type="varchar(255)" remarks="Место рождения"/>
+            <column name="passport" type="varchar(11)" remarks="Серия и номер паспорта"/>
+            <column name="phone_number" type="varchar(11)" remarks="Номер телефона"/>
+            <column name="email" type="varchar(50)" remarks="email"/>
+            <column name="registration_address" type="varchar(255)" remarks="Адрес регистрации"/>
+            <column name="actual_living_address" type="varchar(255)" remarks="Фактический адрес проживания"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
