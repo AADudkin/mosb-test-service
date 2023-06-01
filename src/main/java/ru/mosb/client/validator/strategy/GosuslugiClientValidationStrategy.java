@@ -40,5 +40,8 @@ public class GosuslugiClientValidationStrategy implements ClientValidationStrate
         if (isEmpty(dto.getPhoneNumber())) {
             throw new ClientSourceValidationException("phone number is mandatory", XSource.GOSUSLUGI);
         }
+        if (isEmpty(dto.getRegistration())) {
+            throw new ClientSourceValidationException("registration is mandatory", XSource.GOSUSLUGI);
+        }
     }
 }

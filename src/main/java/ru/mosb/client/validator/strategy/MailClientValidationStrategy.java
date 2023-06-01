@@ -16,8 +16,11 @@ public class MailClientValidationStrategy implements ClientValidationStrategy{
 
     @Override
     public void validate(ClientDto dto) {
-        if (isEmpty(dto.getFirstName()) || isEmpty(dto.getEmail())) {
-            throw new ClientSourceValidationException("first name and email are mandatory", XSource.MAIL);
+        if (isEmpty(dto.getFirstName())) {
+            throw new ClientSourceValidationException("first name is mandatory", XSource.MAIL);
+        }
+        if (isEmpty(dto.getEmail())) {
+            throw new ClientSourceValidationException("email is mandatory", XSource.MAIL);
         }
     }
 }
